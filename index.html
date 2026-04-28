@@ -3,58 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title>Isako AS — Mobile Apps & Games</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            color: #333;
+            color: #e4e4e7;
+            background: #09090b;
+            min-height: 100vh;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #fff;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, #818cf8, #6366f1, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #a1a1aa;
+            max-width: 440px;
             line-height: 1.6;
         }
-        h1 { font-size: 24px; }
-        h2 { font-size: 18px; margin-top: 32px; }
-        p { margin: 12px 0; }
-        .updated { color: #666; font-size: 14px; }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .card {
+            background: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 16px;
+            padding: 32px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .card:hover {
+            border-color: #6366f1;
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid #27272a;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #52525b;
+            line-height: 2;
+        }
+
+        footer a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 80px 24px 60px; }
+            .logo { font-size: 36px; }
+            .tagline { font-size: 16px; }
+            .cards { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: April 8, 2026</p>
+    <section class="hero">
+        <div class="logo"><span>Isako</span></div>
+        <p class="tagline">We build mobile apps and games for iOS and Android. Thoughtful design, no data collection, crafted in northern Norway.</p>
+    </section>
 
-    <p>This privacy policy applies to all mobile applications published by Isako AS ("we", "us", "our"), including but not limited to Lettergeist, and any future apps published under the same developer account.</p>
+    <section class="cards">
+        <div class="card">
+            <div class="card-icon">&#127918;</div>
+            <h2>Games</h2>
+            <p>Word games, puzzles, and creative challenges designed to be fun without being exploitative.</p>
+            <span class="coming-soon">Coming soon</span>
+        </div>
+        <div class="card">
+            <div class="card-icon">&#129704;</div>
+            <h2>Apps</h2>
+            <p>Tools for personal growth and daily practice. Built for yourself first, shared with everyone.</p>
+            <span class="coming-soon">Coming soon</span>
+        </div>
+        <div class="card">
+            <div class="card-icon">&#128274;</div>
+            <h2>Privacy First</h2>
+            <p>No accounts, no tracking, no data collection. Your data stays on your device. Always.</p>
+        </div>
+    </section>
 
-    <h2>Data We Collect</h2>
-    <p>Our apps do <strong>not</strong> collect, store, or transmit any personal data. We do not require accounts, logins, or registration of any kind.</p>
-
-    <p>All game data (progress, settings, statistics) is stored locally on your device and is never sent to any server. All functionality works fully offline.</p>
-
-    <p>This app is compliant with the General Data Protection Regulation (GDPR) and Norwegian personal data law (personopplysningsloven). Since no personal data is collected or processed, no legal basis for processing is required.</p>
-
-    <h2>Third-Party Services</h2>
-    <p>Our apps do not use third-party analytics, tracking, or advertising SDKs.</p>
-
-    <p>If a future update introduces advertising, this policy will be updated to reflect the data practices of the ad provider.</p>
-
-    <h2>Children's Privacy</h2>
-    <p>Our apps do not knowingly collect any personal information from children. Since we do not collect data from any user, our apps are safe for all ages.</p>
-
-    <h2>Permissions</h2>
-    <p>Our apps may request the following permissions:</p>
-    <ul>
-        <li><strong>Notifications</strong> — To send optional daily reminders. No data leaves your device.</li>
-    </ul>
-
-    <h2>Data Retention</h2>
-    <p>Since we do not collect any data, there is nothing to retain. Uninstalling the app removes all locally stored data from your device.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date.</p>
-
-    <h2>Contact</h2>
-    <p>If you have questions about this privacy policy, contact us at:</p>
-    <p><strong>arne@isako.no</strong></p>
-    <p>Isako AS, Harstad, Norway</p>
+    <footer>
+        <p>
+            Isako AS &middot; Harstad, Norway<br>
+            <a href="mailto:arne@isako.no">arne@isako.no</a> &middot; <a href="privacy/">Privacy Policy</a>
+        </p>
+    </footer>
 </body>
 </html>
