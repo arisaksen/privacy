@@ -100,15 +100,40 @@
             line-height: 1.6;
         }
 
-        .coming-soon {
-            display: inline-block;
-            background: rgba(99, 102, 241, 0.15);
-            color: #818cf8;
+        .card a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .about {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            border-top: 1px solid #27272a;
+        }
+
+        .about h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .about p {
+            font-size: 15px;
+            color: #a1a1aa;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .about .org-info {
             font-size: 13px;
-            font-weight: 500;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-top: 12px;
+            color: #52525b;
+            margin-top: 20px;
         }
 
         footer {
@@ -145,32 +170,35 @@
 <body>
     <section class="hero">
         <div class="logo"><span>Isako</span></div>
-        <p class="tagline">We build mobile apps and games for iOS and Android. Thoughtful design, no data collection, crafted in northern Norway.</p>
+        <p class="tagline">Mobile apps and games for iOS and Android. Thoughtful design, no data collection, crafted in northern Norway.</p>
     </section>
 
     <section class="cards">
         <div class="card">
             <div class="card-icon">&#127918;</div>
-            <h2>Games</h2>
-            <p>Word games, puzzles, and creative challenges designed to be fun without being exploitative.</p>
-            <span class="coming-soon">Coming soon</span>
+            <h2>Lettergeist</h2>
+            <p>A word game where you duel an AI ghost. Build words under pressure, challenge the ghost's bluffs, and climb the daily leaderboard. Single-player and daily competitive modes.</p>
         </div>
         <div class="card">
             <div class="card-icon">&#129704;</div>
-            <h2>Apps</h2>
-            <p>Tools for daily practice and personal growth.</p>
-            <span class="coming-soon">Coming soon</span>
+            <h2>Prokopton</h2>
+            <p>A Stoic practice app grounded in the writings of Epictetus, Seneca, and Marcus Aurelius. Daily exercises, not quotes. Active philosophy as a way of life.</p>
         </div>
         <div class="card">
             <div class="card-icon">&#128274;</div>
             <h2>Privacy First</h2>
-            <p>No accounts, no tracking, no data collection. Your data stays on your device. Always.</p>
+            <p>No accounts, no tracking, no data collection. Your data stays on your device. Always. Read our full <a href="privacy/">privacy policy</a>.</p>
         </div>
+    </section>
+
+    <section class="about">
+        <h2>About Isako</h2>
+        <p>Isako AS is a software company based in Harstad, Norway, founded in 2026. We design and develop mobile applications for iOS and Android using Kotlin Multiplatform. Our focus is on crafting games and tools that respect the user — no ads by default, no tracking, no dark patterns.</p>
+        <p class="org-info">Isako AS &middot; Org.nr: 937 548 958 &middot; Harstad, Norway</p>
     </section>
 
     <footer>
         <p>
-            Isako AS &middot; Harstad, Norway<br>
             <a href="mailto:arne@isako.no">arne@isako.no</a> &middot; <a href="privacy/">Privacy Policy</a>
         </p>
     </footer>
